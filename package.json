@@ -1,0 +1,57 @@
+{
+  "name": "emporia-vue",
+  "version": "1.0.0",
+  "description": "TypeScript client for the Emporia Vue energy monitoring API",
+  "author": "Chris Gander",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrisgander/emporia-vue.git"
+  },
+  "keywords": [
+    "emporia",
+    "vue",
+    "energy",
+    "monitoring",
+    "smart-home",
+    "electricity",
+    "power-consumption",
+    "iot"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./storage": {
+      "import": "./dist/storage/index.js",
+      "types": "./dist/storage/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "bun build ./src/index.ts ./src/storage/index.ts --outdir ./dist --target node && tsc --emitDeclarationOnly",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "bun run build && bun test"
+  },
+  "dependencies": {
+    "amazon-cognito-identity-js": "^6.3.16",
+    "jose": "^5.2.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0"
+  }
+}
