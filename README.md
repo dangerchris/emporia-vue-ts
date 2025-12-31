@@ -7,7 +7,7 @@ This library is a TypeScript port of [PyEmVue](https://github.com/magico13/PyEmV
 ## Installation
 
 ```bash
-npm install emporia-vue
+npm install github:dangerchris/emporia-vue-ts
 ```
 
 ## Requirements
