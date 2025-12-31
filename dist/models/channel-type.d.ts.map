@@ -1,0 +1,1 @@
+{"version":3,"file":"channel-type.d.ts","sourceRoot":"","sources":["../../src/models/channel-type.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,sBAAsB,EAAE,MAAM,wBAAwB,CAAC;AAErE,qBAAa,WAAW;IACtB,cAAc,EAAE,MAAM,CAAK;IAC3B,WAAW,EAAE,MAAM,CAAM;IACzB,UAAU,EAAE,OAAO,CAAS;IAE5B,MAAM,CAAC,eAAe,CAAC,IAAI,EAAE,sBAAsB,GAAG,WAAW;CAOlE"}
