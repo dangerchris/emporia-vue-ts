@@ -1,3 +1,6 @@
+// These are Emporia's official public AWS Cognito credentials.
+// They are not secrets and are required for all clients to authenticate with the API.
+// See: https://github.com/magico13/PyEmVue
 export const COGNITO_USER_POOL_ID = "us-east-2_ghlOXVLi1";
 export const COGNITO_CLIENT_ID = "4qte47jbstod8apnfic0bunmrq";
 export const COGNITO_REGION = "us-east-2";

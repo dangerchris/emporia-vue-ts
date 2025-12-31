@@ -2,6 +2,8 @@
 
 A TypeScript client for the [Emporia Vue](https://www.emporiaenergy.com/) energy monitoring API.
 
+This library is a TypeScript port of [PyEmVue](https://github.com/magico13/PyEmVue) by [@magico13](https://github.com/magico13). Full credit to the original project for reverse-engineering the Emporia API. This port was created with assistance from [Claude Code](https://claude.ai/claude-code).
+
 ## Installation
 
 ```bash
@@ -45,6 +47,12 @@ for (const [deviceGid, device] of usage) {
   }
 }
 ```
+
+## Authentication
+
+This library authenticates with Emporia's API using AWS Cognito. The Cognito User Pool ID and Client ID embedded in this library are Emporia's official public credentials, extracted from their mobile app. These are not secrets - they are required for any client to authenticate with the Emporia API and are the same credentials used by [PyEmVue](https://github.com/magico13/PyEmVue) and other community clients.
+
+Your Emporia account credentials (username/password) are sent directly to AWS Cognito and are never transmitted to or stored by this library beyond the authentication flow.
 
 ## Token Storage
 
@@ -200,6 +208,12 @@ try {
   }
 }
 ```
+
+## Disclaimer
+
+This library is an unofficial community project and is not affiliated with, endorsed by, or supported by Emporia Energy. It is provided AS-IS with no warranty of any kind. Use at your own risk.
+
+The Emporia API is undocumented and may change at any time without notice, which could break this library. The authors are not responsible for any issues arising from the use of this software, including but not limited to service interruptions, data loss, or account-related problems.
 
 ## License
 
